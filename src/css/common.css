@@ -16,3 +16,37 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.nav-list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-list-link{
+  position: relative;
+  text-decoration: none;
+  color: #373163;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  text-align: center;
+}
+
+.nav-list-link::before {
+	content: '';
+	position: absolute;
+	left: 0; bottom: -5px;
+	width: 0;
+	height: 1.5px;
+	background-color: #373163;
+  transition: width .5s;
+}
+
+.nav-list-link:hover:before {
+	width: 100%;
+}
